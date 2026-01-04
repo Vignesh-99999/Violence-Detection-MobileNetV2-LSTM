@@ -29,21 +29,21 @@ The project includes:
 ## 🧠 Model Architecture
 
 ```
-Input Video (16 frames, 112×112×3)
+Input Video (16 frames, 112×112×3) (Taking 16 snapshots from the video and making them all the same size.)
         │
-TimeDistributed MobileNetV2
+TimeDistributed MobileNetV2 (Like having a camera expert examine each photo one by one.)
         │
-Global Average Pooling
+Global Average Pooling (Like summarizing a long paragraph into a short key-point list.)
         │
-Bi-Directional LSTM (128)
+Bi-Directional LSTM (128) (Like watching a video twice to better understand what’s going on.)
         │
-Dense (64) + ReLU
+Dense (64) + ReLU (Like making a decision shortlist from all observations.)
         │
-Dropout (0.4)
+Dropout (0.4) (Like practicing with distractions so you don’t overfit.)
         │
-Dense (1) + Sigmoid
+Dense (1) + Sigmoid (Produces one final number between 0 and 1)
         │
-Binary Classification
+Binary Classification (Final decision:Violence/Non-Violence)
 ```
 
 ---
